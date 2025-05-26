@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Analyzer Dashboard</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Chart.js DataLabels Plugin CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Log Analyzer Dashboard</h1>
+
+<div id="countryContainer" class="chart-container">
+    <canvas id="countryChart"></canvas>
+</div>
+
+<div id="cityContainer" class="chart-container" style="display:none;">
+    <h3>City-wise Access (Grouped by Country)</h3>
+    <canvas id="cityChart"></canvas>
+    <button id="backButton" style="display:none; margin-top: 10px;">← Back to Country View</button>
+</div>
+
+
+<div id="osContainer" class="chart-container">
+    <canvas id="osChart"></canvas>
+</div>
+
+<div id="osVersionContainer" class="chart-container" style="display:none;">
+    <canvas id="osVersionChart"></canvas>
+    <button id="backButtonOS" style="display:none; margin-top: 10px;">← Back to OS </button>
+</div>
+
+<div class="chart-container">
+    <h3>Hourly Access Trend</h3>
+    <canvas id="hourlyChart"></canvas>
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+</body>
+</html>
